@@ -249,6 +249,33 @@ a:hover {
 }
 
 /* ------------------------------------------------------------------------
+# Socials mach 2
+--------------------------------------------------------------------------*/
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin: 0 8px;
+  transition: 0.3s;
+  padding: 14px;
+  border-radius: 50px;
+  border: 1px solid burlywood;
+}
+
+.social-links a:hover {
+  color: #fff;
+  border-color: burlywood;
+  background: burlywood;
+}
+
+/* ------------------------------------------------------------------------
 # ul-resect
 --------------------------------------------------------------------------*/
 .ul-resect,
@@ -283,7 +310,7 @@ a:hover {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
+  box-shadow: 0 0 0 10px bisque;
   display: block;
 }
 
