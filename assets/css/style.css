@@ -622,20 +622,21 @@ a:hover {
   z-index: 99;
   opacity:0;
   visibility: hidden;
-  background: antiquewhite;
+  background: black;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .navbar .dropdown ul li {
-  min-width: 200px;
+  min-width: 170px;
 }
 
 .navbar .dropdown ul a {
   padding: 10px 20px;
-  font-size: 14px;
+  font-family: bebas neue;
+  font-size: 17px;
   text-transform: none;
-  color: #4e4e4e;
+  color: white;
 }
 
 .navbar .dropdown ul a i {
@@ -645,25 +646,25 @@ a:hover {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: antiquewhite;
+  color: burlywood;
 }
 
 .navbar .dropdown:hover>ul {
-  opacity: 1;
+  opacity: .9;
   top: 100%;
   visibility: visible;
 }
 
 .navbar .dropdown .dropdown ul {
   top: 0;
-  left: calc(100% - 30px);
+  left: calc(30px - 100%);
   visibility: hidden;
 }
 
 .navbar .dropdown .dropdown:hover>ul {
-  opacity: 1;
+  opacity: .9;
   top: 0;
-  left: 100%;
+  left: -100%;
   visibility: visible;
 }
 
@@ -681,12 +682,12 @@ a:hover {
 # Mobile nav
 --------------------------------------------------------------------------*/
 .mobile-nav-toggle {
-  color: antiquewhite;
+  color: white;
   font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 @media (max-width: 991px) {
@@ -706,8 +707,8 @@ a:hover {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(78, 78, 78, 0.9);
-  transition: 0.3s;
+  background: rgba(0, 0, 0, 0.67);
+  transition: 0.6s;
   z-index: 999;
 }
 
@@ -725,7 +726,7 @@ a:hover {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: black;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -744,13 +745,13 @@ a:hover {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #4e4e4e;
+  color: white;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: bisque;
+  color: burlywood;
 }
 
 .navbar-mobile .getstarted,
@@ -766,7 +767,7 @@ a:hover {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: antiquewhite;
+  background: black;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -926,6 +927,14 @@ a:hover {
   height: 0.7rem;
   background-color: tan;
 }
+
+.portfolio-info .progress .progress-bar {
+  background-color: whitesmoke;
+  border-radius: 0;
+  height: 1rem;
+  background-color: tan;
+}
+
 
 /* ------------------------------------------------------------------------
 # services
@@ -1261,4 +1270,62 @@ footer .credits a {
 .col-12 img:hover {
   opacity: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* ------------------------------------------------------------------------
+# Responsive image gallery
+--------------------------------------------------------------------------*/
+.image-gallery {
+  /* Mobile first */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 0px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-gallery {
+    flex-direction: row;
+  }
+}
+
+/* overlay styles 
+
+.image-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.502);
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.2s 0.1s ease-in-out;
+  color: #fff;
+  /* center overlay content 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hover 
+.image-item:hover .overlay {
+  transform: scale(1);
 }
