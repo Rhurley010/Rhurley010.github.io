@@ -1329,3 +1329,32 @@ footer .credits a {
 .image-item:hover .overlay {
   transform: scale(1);
 }
+
+/* ------------------------------------------------------------------------
+# Responsive image gallery
+--------------------------------------------------------------------------*/
+.image-gallery {
+  /* Mobile first */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-item iframe {
+  width: 100%;
+  border-radius: 0px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-gallery {
+    flex-direction: row;
+  }
+}
