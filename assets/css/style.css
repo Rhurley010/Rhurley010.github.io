@@ -60,7 +60,7 @@ a:hover {
 .box-shadow-a,
 .button:hover {
   text-decoration: none;
-  box-shadow: 0 0 0 4px #cde1f8;
+  box-shadow: 0 0 0 4px white;
 }
 
 .display-5 {
@@ -486,7 +486,7 @@ a:hover {
   text-decoration: none;
   background-color: bisque;
   color: #fff;
-  border-color: #cde1f8;
+  border-color: white;
 }
 
 .button-big {
@@ -988,7 +988,7 @@ a:hover {
  .title-b a{
   color: #fff;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -999,6 +999,8 @@ a:hover {
 
  .subtitle-b {
   color: #fff;
+  font-size: 3rem;
+  font-family: bebas neue;
 }
 /* ------------------------------------------------------------------------
 # My-work - home
